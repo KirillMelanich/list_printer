@@ -34,4 +34,4 @@ class Club(models.Model):
         unique_together = ['name', 'city']
 
     def __str__(self):
-        return f"{self.name} - {self.city} - {self.year}"
+        return f"{self.name}  {self.city} - {self.year}"

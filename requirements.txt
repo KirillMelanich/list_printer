@@ -5,7 +5,7 @@ click==8.1.7
 colorama==0.4.6
 crispy-bootstrap4==2023.1
 Django==4.2.7
-django-bootstrap4==23.2
+django-bootstrap4==23.3
 django-crispy-forms==2.1
 django-debug-toolbar==4.2.0
 flake8==6.1.0

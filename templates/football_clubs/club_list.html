@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <hr>
+  <h1>
+    Clubs List
+  <a style="float: right" class="btn btn-primary" href="{% url 'football_clubs:club-create' %}">Add New Club +</a>
+  </h1>
+  {% if clubs_list %}
+    <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Club</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Founded at</th>
+      <th>Coach</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+
+    {% for club in clubs_list %}
+    <tr>
+      <td>
+        {{club.id}}
+      </td>
+      <td>
+        {{club.name}}
+      </td>
+      <td>
+        {{ club.city }}
+      </td>
+      <td>
+        {{ club.country }}
+      </td>
+        <td>
+            {{ club.year }}
+        </td>
+      <td>
+          {{ club.coach.first_name }} {{ club.coach.last_name }}
+      </td>
+        <td>
+            <a href="{% url 'football_clubs:club-update' pk=club.id %}">update</a>
+        </td>
+      <td>
+            <a class="btn btn-danger" href="{% url 'football_clubs:club-delete' pk=club.id %}">delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+    </table>
+    {% else %}
+      <p>No clubs, sorry</p>
+    {% endif %}
+
+{% endblock %}
