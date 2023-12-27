@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <hr>
+  <h1>
+    Clubs List
+  <a style="float: right" class="btn btn-primary" href="{% url 'football_clubs:coach-create' %}">Add New Coach +</a>
+  </h1>
+  {% if coaches_list %}
+    <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Nationality</th>
+      <th>Age</th>
+      <th>Club</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+
+    {% for coach in coaches_list %}
+    <tr>
+      <td>
+        {{ coach.id }}
+      </td>
+      <td>
+        <button class="btn btn-link" onclick="window.location='{{ coach.get_absolute_url }}';">{{ coach.first_name }} {{ coach.last_name }}</button>
+      </td>
+      <td>
+        {{ coach.nationality }}
+      </td>
+      <td>
+        {{ coach.age }}
+      </td>
+        <td>
+            <button class="btn btn-link" onclick="window.location='{{ coach.club.get_absolute_url }}';">{{ coach.club }}</button>
+        </td>
+        <td>
+          <a class="btn btn-secondary" href="{% url 'football_clubs:coach-update' pk=coach.id %}">update</a>
+        </td>
+      <td>
+            <a class="btn btn-danger" href="{% url 'football_clubs:coach-delete' pk=coach.id %}">delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+    </table>
+    {% else %}
+      <p>No coaches, sorry</p>
+    {% endif %}
+
+{% endblock %}

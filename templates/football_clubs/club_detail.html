@@ -2,11 +2,13 @@
 
 {% block content %}
   <h1>
-  <a style="float: right" class="btn btn-secondary" href="{% url 'vpn:site-update' pk=site.id %}">Edit</a>
+  <a style="float: right" class="btn btn-secondary" href="{% url 'football_clubs:club-update' pk=club.id %}">Edit</a>
   </h1>
-  <p><strong>Site Name: {{ site.site_name }}</strong></p>
-  <p><strong>{{ site.site_url }}</strong></p>
-  <p><strong>Internal Route: {{ internalroute.get_absolute_url }}</strong></p>
+  <p><strong>{{ club.name }}</strong></p>
+  <p><strong>This club is from {{ club.city }}</strong></p>
+  <p><strong>It's been found at {{ club.year }}</strong></p>
+  <p><strong>It's home country is {{ club.country }}</strong></p>
+  <p><strong>The head coach of this team is {{ club.coach }}</strong></p>
 
 
 {% endblock %}

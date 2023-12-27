@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_filters %}
 
 {% block content %}
   <hr>
@@ -25,7 +26,7 @@
         {{club.id}}
       </td>
       <td>
-        {{club.name}}
+        <button class="btn btn-link" onclick="window.location='{{ club.get_absolute_url }}';">{{ club.name }}</button>
       </td>
       <td>
         {{ club.city }}
@@ -37,10 +38,10 @@
             {{ club.year }}
         </td>
       <td>
-          {{ club.coach.first_name }} {{ club.coach.last_name }}
+        <button class="btn btn-link" onclick="window.location='{{ club.coach.get_absolute_url }}';">{{ club.coach.first_name }} {{ club.coach.last_name }}</button>
       </td>
         <td>
-            <a href="{% url 'football_clubs:club-update' pk=club.id %}">update</a>
+            <a class="btn btn-secondary" href="{% url 'football_clubs:club-update' pk=club.id %}">update</a>
         </td>
       <td>
             <a class="btn btn-danger" href="{% url 'football_clubs:club-delete' pk=club.id %}">delete</a>
