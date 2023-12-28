@@ -1,0 +1,275 @@
+[
+    {
+        "model": "football.coach",
+        "pk": 1,
+        "fields": {
+            "first_name": "Jose",
+            "last_name": "Mourihno",
+            "age": 60,
+            "nationality": "Portugal"
+        }
+    },
+    {
+        "model": "football.coach",
+        "pk": 2,
+        "fields": {
+            "first_name": "Pep",
+            "last_name": "Guardiola",
+            "age": 52,
+            "nationality": "Spain"
+        }
+    },
+    {
+        "model": "football.coach",
+        "pk": 3,
+        "fields": {
+            "first_name": "Carlo",
+            "last_name": "Ancelotti",
+            "age": 64,
+            "nationality": "Italy"
+        }
+    },
+    {
+        "model": "football.coach",
+        "pk": 4,
+        "fields": {
+            "first_name": "Xavi",
+            "last_name": "Hernandes",
+            "age": 43,
+            "nationality": "Spain"
+        }
+    },
+    {
+        "model": "football.coach",
+        "pk": 5,
+        "fields": {
+            "first_name": "Massimilliano",
+            "last_name": "Allegri",
+            "age": 56,
+            "nationality": "Italy"
+        }
+    },
+    {
+        "model": "football.coach",
+        "pk": 6,
+        "fields": {
+            "first_name": "Tomas",
+            "last_name": "Tukhel",
+            "age": 50,
+            "nationality": "Germany"
+        }
+    },
+    {
+        "model": "football.coach",
+        "pk": 7,
+        "fields": {
+            "first_name": "Jurgen",
+            "last_name": "Klopp",
+            "age": 56,
+            "nationality": "Germany"
+        }
+    },
+    {
+        "model": "football.coach",
+        "pk": 8,
+        "fields": {
+            "first_name": "Luis",
+            "last_name": "Enrique",
+            "age": 53,
+            "nationality": "Spain"
+        }
+    },
+    {
+        "model": "football.coach",
+        "pk": 9,
+        "fields": {
+            "first_name": "Alexander",
+            "last_name": "Shovkovsiy",
+            "age": 48,
+            "nationality": "Ukraine"
+        }
+    },
+    {
+        "model": "football.coach",
+        "pk": 10,
+        "fields": {
+            "first_name": "Mikel",
+            "last_name": "Arteta",
+            "age": 41,
+            "nationality": "Spain"
+        }
+    },
+    {
+        "model": "football.coach",
+        "pk": 11,
+        "fields": {
+            "first_name": "Diego",
+            "last_name": "Simeone",
+            "age": 53,
+            "nationality": "Argentina"
+        }
+    },
+    {
+        "model": "football.coach",
+        "pk": 12,
+        "fields": {
+            "first_name": "Luciano",
+            "last_name": "Spaletti",
+            "age": 64,
+            "nationality": "Italy"
+        }
+    },
+    {
+        "model": "football.coach",
+        "pk": 13,
+        "fields": {
+            "first_name": "Maurizio",
+            "last_name": "Sarri",
+            "age": 64,
+            "nationality": "Italy"
+        }
+    },
+    {
+        "model": "football.club",
+        "pk": 1,
+        "fields": {
+            "coach": 9,
+            "name": "Dynamo",
+            "city": "Kyiv",
+            "country": "Ukraine",
+            "year": 1927
+        }
+    },
+    {
+        "model": "football.club",
+        "pk": 2,
+        "fields": {
+            "coach": 1,
+            "name": "AC_Roma",
+            "city": "Rome",
+            "country": "Italy",
+            "year": 1927
+        }
+    },
+    {
+        "model": "football.club",
+        "pk": 3,
+        "fields": {
+            "coach": 2,
+            "name": "City",
+            "city": "Manchester",
+            "country": "England",
+            "year": 1894
+        }
+    },
+    {
+        "model": "football.club",
+        "pk": 4,
+        "fields": {
+            "coach": 3,
+            "name": "Real",
+            "city": "Madrid",
+            "country": "Spain",
+            "year": 1902
+        }
+    },
+    {
+        "model": "football.club",
+        "pk": 5,
+        "fields": {
+            "coach": 4,
+            "name": "Barcelona_FC",
+            "city": "Barcelona",
+            "country": "Spain",
+            "year": 1899
+        }
+    },
+    {
+        "model": "football.club",
+        "pk": 6,
+        "fields": {
+            "coach": 5,
+            "name": "Juventus",
+            "city": "Torino",
+            "country": "Italy",
+            "year": 1897
+        }
+    },
+    {
+        "model": "football.club",
+        "pk": 7,
+        "fields": {
+            "coach": 6,
+            "name": "Bayern",
+            "city": "Munich",
+            "country": "Germany",
+            "year": 1900
+        }
+    },
+    {
+        "model": "football.club",
+        "pk": 8,
+        "fields": {
+            "coach": 7,
+            "name": "Liverpool_FC",
+            "city": "Liverpool",
+            "country": "England",
+            "year": 1892
+        }
+    },
+    {
+        "model": "football.club",
+        "pk": 9,
+        "fields": {
+            "coach": 8,
+            "name": "PSG",
+            "city": "Paris",
+            "country": "France",
+            "year": 1970
+        }
+    },
+    {
+        "model": "football.club",
+        "pk": 10,
+        "fields": {
+            "coach": 10,
+            "name": "Arsenal",
+            "city": "London",
+            "country": "England",
+            "year": 1886
+        }
+    },
+    {
+        "model": "football.club",
+        "pk": 11,
+        "fields": {
+            "coach": 11,
+            "name": "Atletico",
+            "city": "Madrid",
+            "country": "Spain",
+            "year": 1903
+        }
+    },
+    {
+        "model": "football.club",
+        "pk": 12,
+        "fields": {
+            "coach": 12,
+            "name": "Inter",
+            "city": "Milano",
+            "country": "Italy",
+            "year": 1906
+        }
+    },
+    {
+        "model": "football.club",
+        "pk": 13,
+        "fields": {
+            "coach": 13,
+            "name": "Lazio",
+            "city": "Rome",
+            "country": "Italy",
+            "year": 1900
+        }
+    }
+]

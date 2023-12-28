@@ -27,6 +27,7 @@ def index(request):
 class ClubListView(generic.ListView):
     model = Club
     template_name = "football/club_list.html"
+    paginate_by = 5
     context_object_name = "clubs_list"
 
 
@@ -53,6 +54,7 @@ class ClubDeleteView(generic.DeleteView):
 class CoachListView(generic.ListView):
     model = Coach
     template_name = "football/coach_list.html"
+    paginate_by = 5
     context_object_name = "coaches_list"
 
 
