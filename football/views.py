@@ -74,5 +74,5 @@ class CoachDetailView(generic.DetailView):
 
 class CoachDeleteView(generic.DeleteView):
     model = Coach
-    success_url = reverse_lazy("football:coach-list")
-    template_name = "football/coach_list.html"
+    success_url = reverse_lazy("football:coach-delete")
+    template_name = "football/coach_confirm_delete.html"
