@@ -10,16 +10,18 @@ def index(request):
     """View function for the home page of the site."""
 
     num_clubs = Club.objects.count()
+    num_coaches = Coach.objects.count()
 
     num_visits = request.session.get("num_visits", 0)
     request.session["num_visits"] = num_visits + 1
 
     context = {
         "num_clubs": num_clubs,
+        "num_coaches": num_coaches,
         "num_visits": num_visits + 1,
     }
 
-    return render(request, "index.html", context=context)
+    return render(request, "football/index.html", context=context)
 
 
 class ClubListView(generic.ListView):

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="jumbotron text-center">
+    <h1 class="display-4">Football Service</h1>
+    <p class="lead">Discover Football Clubs and Coaches</p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Football Clubs</h5>
+            <p class="card-text">Explore our collection of football clubs.</p>
+            <strong class="d-block mb-2">At this site, we have {{ num_clubs }} Football Clubs</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Coaches</h5>
+            <p class="card-text">Meet our experienced football coaches.</p>
+            <strong class="d-block mb-2">At this site, we have {{ num_coaches }} Coaches</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center">You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}</p>
+  </div>
+{% endblock %}
