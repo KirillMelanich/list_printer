@@ -4,8 +4,8 @@
 {% block content %}
   <hr>
   <h1>
-    Clubs List
-  <a style="float: right" class="btn btn-primary" href="{% url 'football_clubs:coach-create' %}">Add New Coach +</a>
+    Coaches List
+  <a style="float: right" class="btn btn-primary" href="{% url 'football:coach-create' %}">Add New Coach +</a>
   </h1>
   {% if coaches_list %}
     <table class="table">
@@ -37,10 +37,10 @@
             <button class="btn btn-link" onclick="window.location='{{ coach.club.get_absolute_url }}';">{{ coach.club }}</button>
         </td>
         <td>
-          <a class="btn btn-secondary" href="{% url 'football_clubs:coach-update' pk=coach.id %}">update</a>
+          <a class="btn btn-secondary" href="{% url 'football:coach-update' pk=coach.id %}">update</a>
         </td>
       <td>
-            <a class="btn btn-danger" href="{% url 'football_clubs:coach-delete' pk=coach.id %}">delete</a>
+            <a class="btn btn-danger" href="{% url 'football:coach-delete' pk=coach.id %}">delete</a>
       </td>
     </tr>
     {% endfor %}

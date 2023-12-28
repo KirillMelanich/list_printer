@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "football_clubs",
+    "football",
     "crispy_forms",
     "crispy_bootstrap4",
 ]

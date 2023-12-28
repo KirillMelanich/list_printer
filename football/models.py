@@ -18,8 +18,11 @@ class Coach(models.Model):
         max_length=255, unique=False, blank=False, null=False
     )
 
+    class Meta:
+        verbose_name_plural = "coaches"
+
     def get_absolute_url(self):
-        return reverse("football_clubs:coach-detail", args=[str(self.id)])
+        return reverse("football:coach-detail", args=[str(self.id)])
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
@@ -45,7 +48,7 @@ class Club(models.Model):
         unique_together = ["name", "city"]
 
     def get_absolute_url(self):
-        return reverse("football_clubs:club-detail", args=[str(self.id)])
+        return reverse("football:club-detail", args=[str(self.id)])
 
     def __str__(self):
         return f"{self.name}  {self.city} - {self.year}"

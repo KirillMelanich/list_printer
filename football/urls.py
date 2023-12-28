@@ -1,6 +1,6 @@
 from django.urls import path
 
-from football_clubs.views import (
+from football.views import (
     index,
     ClubListView,
     ClubCreateView,
@@ -29,4 +29,4 @@ urlpatterns = [
     path("coaches/<int:pk>/detail/", CoachDetailView.as_view(), name="coach-detail"),
 ]
 
-app_name = "football_clubs"
+app_name = "football"

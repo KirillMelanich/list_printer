@@ -2,7 +2,7 @@
 
 {% block content %}
   <h1>
-  <a style="float: right" class="btn btn-secondary" href="{% url 'football_clubs:club-update' pk=club.id %}">Edit</a>
+  <a style="float: right" class="btn btn-secondary" href="{% url 'football:club-update' pk=club.id %}">Edit</a>
   </h1>
   <p><strong>{{ club.name }}</strong></p>
   <p><strong>This club is from {{ club.city }}</strong></p>

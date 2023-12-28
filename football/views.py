@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from football_clubs.forms import ClubForm, CoachForm
-from football_clubs.models import Club, Coach
+from football.forms import ClubForm, CoachForm
+from football.models import Club, Coach
 
 
 def index(request):
@@ -24,7 +24,7 @@ def index(request):
 
 class ClubListView(generic.ListView):
     model = Club
-    template_name = "football_clubs/club_list.html"
+    template_name = "football/club_list.html"
     context_object_name = "clubs_list"
 
 
@@ -44,13 +44,13 @@ class ClubDetailView(generic.DetailView):
 
 class ClubDeleteView(generic.DeleteView):
     model = Club
-    success_url = reverse_lazy("football_clubs:club-list")
-    template_name = "football_clubs/club_confirm_delete.html"
+    success_url = reverse_lazy("football:club-list")
+    template_name = "football/club_confirm_delete.html"
 
 
 class CoachListView(generic.ListView):
     model = Coach
-    template_name = "football_clubs/coach_list.html"
+    template_name = "football/coach_list.html"
     context_object_name = "coaches_list"
 
 
@@ -70,5 +70,5 @@ class CoachDetailView(generic.DetailView):
 
 class CoachDeleteView(generic.DeleteView):
     model = Coach
-    success_url = reverse_lazy("football_clubs:coach-list")
-    template_name = "football_clubs/coach_list.html"
+    success_url = reverse_lazy("football:coach-list")
+    template_name = "football/coach_list.html"

@@ -1,6 +1,6 @@
 from django import forms
 
-from football_clubs.models import Club, Coach
+from football.models import Club, Coach
 
 
 class ClubForm(forms.ModelForm):

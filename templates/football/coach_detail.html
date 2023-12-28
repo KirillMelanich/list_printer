@@ -2,12 +2,12 @@
 
 {% block content %}
   <h1>
-  <a style="float: right" class="btn btn-secondary" href="{% url 'football_clubs:coach-update' pk=coach.id %}">Edit</a>
+  <a style="float: right" class="btn btn-secondary" href="{% url 'football:coach-update' pk=coach.id %}">Edit</a>
   </h1>
   <p><strong>{{ coach.first_name }} {{ coach.last_name }}</strong></p>
   <p><strong>This coach is from {{ coach.nationality }}</strong></p>
   <p><strong>He is {{ coach.age }} years old</strong></p>
-  <p><strong>He is a head coach of {{ coach.club }}</strong></p>
+  <p><strong>He is a head coach of {{ coach.club.name }} from {{ coach.club.city }}</strong></p>
 
 
 {% endblock %}
