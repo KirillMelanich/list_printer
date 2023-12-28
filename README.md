@@ -6,7 +6,7 @@ This Django application allows user to view football clubs and football coaches 
 ## Installation 
 1. Clone the repository:
    ```shell
-   git clone https://github.com/KirillMelanich/list_printer
+   git clone https://github.com/KirillMelanich/list_printer.git
    
 2. Navigate to the project directory and activate virtual environment:
    ```shell
